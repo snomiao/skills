@@ -1,0 +1,14 @@
+{
+  "name": "na-ts",
+  "description": "Upgrade your JavaScript/TypeScript toolchain to modern high-performance tools (tsdown, oxlint, oxfmt, @typescript/native-preview)",
+  "version": "1.0.0",
+  "author": {
+    "name": "Claude Code Community"
+  },
+  "homepage": "https://github.com/snomiao/claude-skills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snomiao/claude-skills.git"
+  },
+  "license": "MIT"
+}
