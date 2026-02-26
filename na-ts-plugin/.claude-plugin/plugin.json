@@ -6,9 +6,6 @@
     "name": "Claude Code Community"
   },
   "homepage": "https://github.com/snomiao/claude-skills",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/snomiao/claude-skills.git"
-  },
+  "repository": "https://github.com/snomiao/claude-skills.git",
   "license": "MIT"
 }
