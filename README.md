@@ -61,11 +61,51 @@ This is much faster than letting Claude manually install packages or having brit
 
 ## Installation
 
-```bash
-# Local testing
-claude --plugin-dir ./na-ts-plugin
+### Method 1: From Marketplace (Recommended)
 
-# In a TypeScript project, you'll see:
+Add the marketplace and install the plugin:
+
+```bash
+# Start Claude Code
+claude
+
+# Add the marketplace
+/plugin marketplace add snomiao/claude-skills
+
+# Install na-ts plugin
+/plugin install na-ts@snomiao-claude-skills
+```
+
+The plugin will auto-update when new versions are released.
+
+### Method 2: Local Development/Testing
+
+For testing or development:
+
+```bash
+# Clone the repository
+git clone https://github.com/snomiao/claude-skills
+cd claude-skills
+
+# Load the plugin directly
+claude --plugin-dir ./na-ts-plugin
+```
+
+### Method 3: Direct GitHub (No marketplace)
+
+Install directly from GitHub:
+
+```bash
+# In Claude Code
+/plugin marketplace add snomiao/claude-skills
+/plugin install na-ts@snomiao-claude-skills
+```
+
+### Verification
+
+After installation, you should see auto-suggestions when opening TypeScript projects:
+
+```
 ⚡ na-ts detected upgradeable tools in this project:
   • eslint → oxlint (50-100x faster)
   • vite → tsdown (10-100x faster)
@@ -138,12 +178,71 @@ my-plugin/
         └── SKILL.md       # Reference ${CLAUDE_PLUGIN_ROOT}/scripts/automate.sh
 ```
 
+## Publishing Your Own Plugins
+
+This plugin is published as a GitHub-based marketplace. To publish your own:
+
+### 1. Create Your Plugin
+
+Follow the structure above with `.claude-plugin/plugin.json` and your plugin files.
+
+### 2. Create Marketplace File
+
+Create `.claude-plugin/marketplace.json` in your repo root:
+
+```json
+{
+  "name": "your-marketplace-name",
+  "owner": {
+    "name": "Your Name",
+    "email": "you@example.com"
+  },
+  "plugins": [
+    {
+      "name": "your-plugin",
+      "source": "./your-plugin-directory",
+      "description": "What your plugin does",
+      "version": "1.0.0"
+    }
+  ]
+}
+```
+
+### 3. Push to GitHub
+
+```bash
+git add .
+git commit -m "Add plugin marketplace"
+git push origin main
+```
+
+### 4. Share with Users
+
+Users install with:
+
+```bash
+/plugin marketplace add your-username/your-repo
+/plugin install your-plugin@your-marketplace-name
+```
+
+### Publishing Options
+
+| Method | Distribution | Updates | Best For |
+|--------|--------------|---------|----------|
+| **GitHub Marketplace** | Public/Private repos | Automatic | Teams, open source |
+| **Official Marketplace** | Submit to `anthropics/claude-plugins-official` | Curated | High-quality public plugins |
+| **npm Package** | npm registry | Version-based | JavaScript ecosystem |
+| **Local Directory** | File path | Manual | Development, testing |
+
+For detailed publishing guide, see [Claude Code Plugin Marketplaces](https://code.claude.com/docs/en/plugin-marketplaces).
+
 ## Documentation
 
 - [Claude Code Docs](https://code.claude.com/docs)
 - [Plugin System](https://code.claude.com/docs/en/plugins)
 - [Hooks Reference](https://code.claude.com/docs/en/hooks)
 - [Skills Guide](https://code.claude.com/docs/en/skills)
+- [Plugin Marketplaces](https://code.claude.com/docs/en/plugin-marketplaces)
 
 ## Contributing
 
