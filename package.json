@@ -1,0 +1,25 @@
+{
+  "name": "claude-skills",
+  "version": "1.0.0",
+  "description": "A collection of Claude Code plugins and skills",
+  "private": true,
+  "scripts": {
+    "prepare": "husky",
+    "validate:plugins": "node scripts/validate-plugin-manifests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snomiao/claude-skills.git"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "plugins",
+    "skills"
+  ],
+  "author": "snomiao",
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^9.0.11"
+  }
+}

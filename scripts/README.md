@@ -41,11 +41,17 @@ The `validate-plugin-manifests.js` script validates all `.claude-plugin/plugin.j
 
 ### Pre-commit Hook
 
-The validation runs automatically via a git pre-commit hook at `.git/hooks/pre-commit`. It only validates plugin.json files that are staged for commit.
+The validation runs automatically via [Husky](https://typicode.github.io/husky/) git hooks. The hook is defined in `.husky/pre-commit` and validates all staged plugin.json files before allowing the commit.
 
 ### Manual validation
 
 To manually run validation on all staged plugin.json files:
+
+```bash
+npm run validate:plugins
+```
+
+Or directly:
 
 ```bash
 node scripts/validate-plugin-manifests.js
@@ -53,8 +59,10 @@ node scripts/validate-plugin-manifests.js
 
 ### Setup
 
-The pre-commit hook is already installed at `.git/hooks/pre-commit`. If you need to reinstall it:
+Husky hooks are automatically installed when you run `npm install` (via the `prepare` script in package.json). For a fresh clone of the repository:
 
 ```bash
-chmod +x scripts/validate-plugin-manifests.js .git/hooks/pre-commit
+npm install
 ```
+
+This ensures all developers have the same validation hooks without needing to manually copy files.

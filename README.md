@@ -254,6 +254,23 @@ Contributions welcome! Guidelines:
 4. Test with real projects
 5. Share performance improvements
 
+### Development Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/snomiao/claude-skills
+cd claude-skills
+
+# Install dependencies (sets up git hooks)
+npm install
+```
+
+This will automatically set up:
+- **Pre-commit validation** - Validates all plugin.json files before commits
+- **Husky hooks** - Ensures all contributors have the same validation
+
+The pre-commit hook validates that plugin manifests follow the correct schema (especially that `repository` is a string, not an object).
+
 ## License
 
 MIT - see LICENSE file

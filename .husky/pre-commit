@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Validate plugin manifests
+node scripts/validate-plugin-manifests.js
