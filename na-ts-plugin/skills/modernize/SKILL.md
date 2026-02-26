@@ -1,6 +1,6 @@
 ---
-name: upgrade
-description: Upgrade JavaScript/TypeScript toolchain to modern high-performance alternatives. Use when modernizing build tools, linters, or compilers.
+name: modernize
+description: Modernize JavaScript/TypeScript toolchain to high-performance native alternatives. Use when upgrading build tools, linters, or compilers.
 ---
 
 # na-ts - Native TypeScript Toolchain Upgrade

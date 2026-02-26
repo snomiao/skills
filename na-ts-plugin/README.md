@@ -65,14 +65,14 @@ claude --plugin-dir /path/to/na-ts-plugin
   • prettier → oxfmt (50-100x faster)
   • vite → tsdown (10-100x faster)
 
-Run /na-ts:upgrade to upgrade to faster tools.
+Run /na-ts:modernize to upgrade to faster tools.
 ```
 
 ### Manual Upgrade
 
 ```bash
 # In Claude Code
-/na-ts:upgrade
+/na-ts:modernize
 ```
 
 Claude will:
@@ -91,14 +91,14 @@ You can also be specific:
 ```
 You: I want to replace ESLint with something faster
 
-Claude: [Uses /na-ts:upgrade skill]
+Claude: [Uses /na-ts:modernize skill]
 I'll help you migrate from ESLint to oxlint...
 ```
 
 ```
 You: Our Vite builds are too slow
 
-Claude: [Uses /na-ts:upgrade skill]
+Claude: [Uses /na-ts:modernize skill]
 I'll upgrade your build system to tsdown...
 ```
 
@@ -193,7 +193,7 @@ I'll upgrade your build system to tsdown...
 ### Example 1: Full Toolchain Upgrade
 
 ```
-You: /na-ts:upgrade
+You: /na-ts:modernize
 
 Claude: I'll analyze your current toolchain...
 
@@ -238,7 +238,7 @@ I've updated your documentation and CI config as well.
 ```
 You: Our ESLint is really slow, can we speed it up?
 
-Claude: [Uses /na-ts:upgrade]
+Claude: [Uses /na-ts:modernize]
 
 I'll upgrade you to oxlint, which is 50-100x faster than ESLint.
 
@@ -286,7 +286,7 @@ Automatically updates:
 
 ## When to Use This Plugin
 
-Use `/na-ts:upgrade` when:
+Use `/na-ts:modernize` when:
 - ESLint takes more than 5 seconds
 - Production builds take more than 1 minute
 - Type checking is slow
@@ -357,7 +357,7 @@ Test the plugin:
 claude --plugin-dir ./na-ts-plugin
 
 # Then in a TypeScript project:
-/na-ts:upgrade
+/na-ts:modernize
 ```
 
 ## Why These Tools?

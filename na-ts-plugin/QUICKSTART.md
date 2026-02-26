@@ -12,7 +12,7 @@ claude --plugin-dir /path/to/na-ts-plugin
 
 ```bash
 # In Claude Code
-/na-ts:upgrade
+/na-ts:modernize
 ```
 
 That's it! Claude will:
@@ -25,7 +25,7 @@ That's it! Claude will:
 ## Example Session
 
 ```
-You: /na-ts:upgrade
+You: /na-ts:modernize
 
 Claude: I'll analyze your toolchain...
 
