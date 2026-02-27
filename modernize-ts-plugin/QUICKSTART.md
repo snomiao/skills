@@ -1,18 +1,18 @@
-# na-ts Quick Start
+# modernize-ts Quick Start
 
 Upgrade your toolchain to modern native tools in minutes.
 
 ## Install
 
 ```bash
-claude --plugin-dir /path/to/na-ts-plugin
+claude --plugin-dir /path/to/modernize-ts-plugin
 ```
 
 ## Use
 
 ```bash
 # In Claude Code
-/na-ts:modernize
+/modernize-ts:modernize
 ```
 
 That's it! Claude will:
@@ -25,7 +25,7 @@ That's it! Claude will:
 ## Example Session
 
 ```
-You: /na-ts:modernize
+You: /modernize-ts:modernize
 
 Claude: I'll analyze your toolchain...
 

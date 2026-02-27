@@ -21,13 +21,13 @@ COUNT=$(echo "$RECOMMENDATIONS" | jq 'length')
 
 # Build suggestion message
 echo ""
-echo "⚡ na-ts detected upgradeable tools in this project:"
+echo "⚡ modernize-ts detected upgradeable tools in this project:"
 echo ""
 
 echo "$RECOMMENDATIONS" | jq -r '.[] | "  • \(.from) → \(.to) (\(.reason))"'
 
 echo ""
-echo "Run /na-ts:modernize to modernize to faster tools."
+echo "Run /modernize-ts:modernize to modernize to faster tools."
 echo ""
 
 exit 0

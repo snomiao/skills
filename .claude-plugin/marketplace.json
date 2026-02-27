@@ -10,8 +10,8 @@
   },
   "plugins": [
     {
-      "name": "na-ts",
-      "source": "./na-ts-plugin",
+      "name": "modernize-ts",
+      "source": "./modernize-ts-plugin",
       "description": "Upgrade JavaScript/TypeScript toolchain to modern native alternatives (oxlint, tsdown, @typescript/native-preview)",
       "version": "1.0.0",
       "author": {

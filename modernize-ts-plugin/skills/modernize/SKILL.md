@@ -3,7 +3,7 @@ name: modernize
 description: Modernize JavaScript/TypeScript toolchain to high-performance native alternatives. Use when upgrading build tools, linters, or compilers.
 ---
 
-# na-ts - Native TypeScript Toolchain Upgrade
+# modernize-ts - Native TypeScript Toolchain Upgrade
 
 You are an expert in modern JavaScript/TypeScript tooling. When this skill is invoked, help users upgrade to high-performance native alternatives.
 

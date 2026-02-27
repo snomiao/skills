@@ -1,5 +1,5 @@
 {
-  "description": "na-ts - Auto-suggest toolchain upgrades on session start",
+  "description": "modernize-ts - Auto-suggest toolchain upgrades on session start",
   "hooks": {
     "SessionStart": [
       {

@@ -4,7 +4,7 @@ A collection of Claude Code plugins and skills to enhance your development workf
 
 ## Plugins
 
-### ⚡ na-ts (Native TypeScript)
+### ⚡ modernize-ts (Native TypeScript)
 
 Upgrade your JavaScript/TypeScript toolchain to blazing-fast native alternatives.
 
@@ -23,14 +23,14 @@ Upgrade your JavaScript/TypeScript toolchain to blazing-fast native alternatives
 
 **Usage:**
 ```bash
-claude --plugin-dir ./na-ts-plugin
+claude --plugin-dir ./modernize-ts-plugin
 
 # Automatic suggestions on session start
 # Or run manually:
-/na-ts:modernize
+/modernize-ts:modernize
 ```
 
-[Read more →](na-ts-plugin/README.md)
+[Read more →](modernize-ts-plugin/README.md)
 
 ---
 
@@ -72,8 +72,8 @@ claude
 # Add the marketplace
 /plugin marketplace add snomiao/claude-skills
 
-# Install na-ts plugin
-/plugin install na-ts@snomiao-claude-skills
+# Install modernize-ts plugin
+/plugin install modernize-ts@snomiao-claude-skills
 ```
 
 The plugin will auto-update when new versions are released.
@@ -88,7 +88,7 @@ git clone https://github.com/snomiao/claude-skills
 cd claude-skills
 
 # Load the plugin directly
-claude --plugin-dir ./na-ts-plugin
+claude --plugin-dir ./modernize-ts-plugin
 ```
 
 ### Method 3: Direct GitHub (No marketplace)
@@ -98,7 +98,7 @@ Install directly from GitHub:
 ```bash
 # In Claude Code
 /plugin marketplace add snomiao/claude-skills
-/plugin install na-ts@snomiao-claude-skills
+/plugin install modernize-ts@snomiao-claude-skills
 ```
 
 ### Verification
@@ -106,21 +106,21 @@ Install directly from GitHub:
 After installation, you should see auto-suggestions when opening TypeScript projects:
 
 ```
-⚡ na-ts detected upgradeable tools in this project:
+⚡ modernize-ts detected upgradeable tools in this project:
   • eslint → oxlint (50-100x faster)
   • vite → tsdown (10-100x faster)
 
-Run /na-ts:modernize to modernize to faster tools.
+Run /modernize-ts:modernize to modernize to faster tools.
 ```
 
 ## Quick Start
 
 ```bash
 # 1. Load plugin
-claude --plugin-dir ./na-ts-plugin
+claude --plugin-dir ./modernize-ts-plugin
 
 # 2. Run modernization
-/na-ts:modernize
+/modernize-ts:modernize
 
 # 3. Scripts handle mechanical work (2s)
 # 4. Claude handles complex parts (30s)
@@ -130,7 +130,7 @@ claude --plugin-dir ./na-ts-plugin
 ## Plugin Structure
 
 ```
-na-ts-plugin/
+modernize-ts-plugin/
 ├── .claude-plugin/
 │   └── plugin.json       # Plugin metadata
 ├── scripts/

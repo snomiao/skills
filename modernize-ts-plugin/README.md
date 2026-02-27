@@ -1,10 +1,10 @@
-# na-ts - Native TypeScript Toolchain Plugin
+# modernize-ts - Native TypeScript Toolchain Plugin
 
 Upgrade your JavaScript/TypeScript toolchain to blazing-fast modern alternatives.
 
-## What is na-ts?
+## What is modernize-ts?
 
-na-ts (Native TypeScript) helps you migrate from traditional JavaScript/TypeScript tools to high-performance native alternatives:
+modernize-ts (Native TypeScript) helps you migrate from traditional JavaScript/TypeScript tools to high-performance native alternatives:
 
 | Old Tool | New Tool | Speed Improvement |
 |----------|----------|-------------------|
@@ -32,7 +32,7 @@ This hybrid approach is much faster than pure AI or pure scripting.
 
 ```bash
 # Run Claude Code with the plugin
-claude --plugin-dir /path/to/na-ts-plugin
+claude --plugin-dir /path/to/modernize-ts-plugin
 ```
 
 ### Platform Support
@@ -53,26 +53,26 @@ If `jq` is unavailable, Claude will handle migrations manually (slightly slower 
 
 ### Automatic Suggestions
 
-When you open a project with outdated tools, na-ts automatically suggests upgrades:
+When you open a project with outdated tools, modernize-ts automatically suggests upgrades:
 
 ```bash
-claude --plugin-dir /path/to/na-ts-plugin
+claude --plugin-dir /path/to/modernize-ts-plugin
 
 # On session start in a project:
-⚡ na-ts detected upgradeable tools in this project:
+⚡ modernize-ts detected upgradeable tools in this project:
 
   • eslint → oxlint (50-100x faster)
   • prettier → oxfmt (50-100x faster)
   • vite → tsdown (10-100x faster)
 
-Run /na-ts:modernize to upgrade to faster tools.
+Run /modernize-ts:modernize to upgrade to faster tools.
 ```
 
 ### Manual Upgrade
 
 ```bash
 # In Claude Code
-/na-ts:modernize
+/modernize-ts:modernize
 ```
 
 Claude will:
@@ -91,14 +91,14 @@ You can also be specific:
 ```
 You: I want to replace ESLint with something faster
 
-Claude: [Uses /na-ts:modernize skill]
+Claude: [Uses /modernize-ts:modernize skill]
 I'll help you migrate from ESLint to oxlint...
 ```
 
 ```
 You: Our Vite builds are too slow
 
-Claude: [Uses /na-ts:modernize skill]
+Claude: [Uses /modernize-ts:modernize skill]
 I'll upgrade your build system to tsdown...
 ```
 
@@ -193,7 +193,7 @@ I'll upgrade your build system to tsdown...
 ### Example 1: Full Toolchain Upgrade
 
 ```
-You: /na-ts:modernize
+You: /modernize-ts:modernize
 
 Claude: I'll analyze your current toolchain...
 
@@ -238,7 +238,7 @@ I've updated your documentation and CI config as well.
 ```
 You: Our ESLint is really slow, can we speed it up?
 
-Claude: [Uses /na-ts:modernize]
+Claude: [Uses /modernize-ts:modernize]
 
 I'll upgrade you to oxlint, which is 50-100x faster than ESLint.
 
@@ -286,7 +286,7 @@ Automatically updates:
 
 ## When to Use This Plugin
 
-Use `/na-ts:modernize` when:
+Use `/modernize-ts:modernize` when:
 - ESLint takes more than 5 seconds
 - Production builds take more than 1 minute
 - Type checking is slow
@@ -340,7 +340,7 @@ Use `/na-ts:modernize` when:
 ## Project Structure
 
 ```
-na-ts-plugin/
+modernize-ts-plugin/
 ├── .claude-plugin/
 │   └── plugin.json       # Plugin metadata
 ├── skills/
@@ -354,10 +354,10 @@ na-ts-plugin/
 Test the plugin:
 
 ```bash
-claude --plugin-dir ./na-ts-plugin
+claude --plugin-dir ./modernize-ts-plugin
 
 # Then in a TypeScript project:
-/na-ts:modernize
+/modernize-ts:modernize
 ```
 
 ## Why These Tools?

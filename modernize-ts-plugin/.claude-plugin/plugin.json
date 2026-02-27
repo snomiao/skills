@@ -1,5 +1,5 @@
 {
-  "name": "na-ts",
+  "name": "modernize-ts",
   "description": "Upgrade your JavaScript/TypeScript toolchain to modern high-performance tools (tsdown, oxlint, oxfmt, @typescript/native-preview)",
   "version": "1.0.0",
   "author": {
