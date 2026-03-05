@@ -9,7 +9,11 @@ You are an expert in modern JavaScript/TypeScript tooling. When this skill is in
 
 ## IMPORTANT: Use Automation Scripts First
 
-The plugin includes scripts to handle mechanical work. **Always try these first** before manual interventions.
+This skill includes scripts to handle mechanical work. **Always try these first** before manual interventions.
+
+```bash
+SKILL_DIR="${CLAUDE_CONFIG_DIR:-$HOME/.claude}/skills/modernize"
+```
 
 **Platform Support:**
 - ✓ Linux/macOS - Full support
@@ -19,7 +23,7 @@ The plugin includes scripts to handle mechanical work. **Always try these first*
 ### 1. Detect Current Environment
 
 ```bash
-${CLAUDE_PLUGIN_ROOT}/scripts/detect.sh
+$SKILL_DIR/scripts/detect.sh
 ```
 
 This outputs JSON with:
@@ -37,7 +41,7 @@ For mechanical work (install packages, update scripts), use these:
 
 **Migrate to oxlint/oxfmt:**
 ```bash
-${CLAUDE_PLUGIN_ROOT}/scripts/migrate-to-oxlint.sh
+$SKILL_DIR/scripts/migrate-to-oxlint.sh
 ```
 - Detects package manager automatically
 - Installs oxlint
@@ -46,7 +50,7 @@ ${CLAUDE_PLUGIN_ROOT}/scripts/migrate-to-oxlint.sh
 
 **Migrate to tsdown:**
 ```bash
-${CLAUDE_PLUGIN_ROOT}/scripts/migrate-to-tsdown.sh
+$SKILL_DIR/scripts/migrate-to-tsdown.sh
 ```
 - Detects package manager
 - Installs tsdown
@@ -55,7 +59,7 @@ ${CLAUDE_PLUGIN_ROOT}/scripts/migrate-to-tsdown.sh
 
 **Migrate to TypeScript native:**
 ```bash
-${CLAUDE_PLUGIN_ROOT}/scripts/migrate-to-ts-native.sh
+$SKILL_DIR/scripts/migrate-to-ts-native.sh
 ```
 - Installs @typescript/native-preview
 - No script changes needed (drop-in replacement)
