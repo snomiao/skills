@@ -17,6 +17,10 @@ Includes automation scripts for detection and migration, so Claude handles mecha
 ## Install
 
 ```bash
+# recommend: bunx, which is way faster than npx
+bunx skills add snomiao/skills --skill modernize -g -y
+
+# or npx if you are familiar with
 npx skills add snomiao/skills --skill modernize -g -y
 ```
 
