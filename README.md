@@ -14,17 +14,28 @@ Upgrade your JavaScript/TypeScript toolchain to blazing-fast native alternatives
 
 Includes automation scripts for detection and migration, so Claude handles mechanical work instantly and focuses on complex decisions and edge cases.
 
+### heal-pr
+
+Fix and heal GitHub Pull Requests automatically:
+
+- **CI/CD failures** → diagnose logs and fix code issues
+- **Review comments** → address feedback or explain disagreements
+- **Merge conflicts** → rebase and resolve intelligently
+- **Bot reviews** → iterate with @copilot until approved
+
+Systematically works through all PR issues in priority order, committing each fix separately for clean history.
+
 ## Install
 
 ```bash
 # recommend: bunx, which is way faster than npx
 bunx skills add snomiao/skills --skill modernize -g -y
+bunx skills add snomiao/skills --skill heal-pr -g -y
 
 # or npx if you are familiar with
 npx skills add snomiao/skills --skill modernize -g -y
+npx skills add snomiao/skills --skill heal-pr -g -y
 ```
-
-This copies `skills/modernize/` (including `SKILL.md` and all migration scripts) into `~/.claude/skills/modernize/`.
 
 ## What's Included
 
@@ -37,6 +48,9 @@ skills/modernize/
     ├── migrate-to-tsdown.sh     # Migrate bundler to tsdown
     ├── migrate-to-ts-native.sh  # Install @typescript/native-preview
     └── suggest-upgrades.sh      # Auto-suggest available upgrades
+
+skills/heal-pr/
+└── SKILL.md                     # PR healing workflow for Claude
 ```
 
 ## License
